@@ -2,16 +2,39 @@
     margin: 0;
     border: 0;
     padding: 0;
-    box-sizing: 0;
+    box-sizing: border-box;
     outline: 0;
+    font-family: "Montserrat", sans-serif;
+}
+
+header{
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+    padding: 80px 70px 110px;
+    background-color: #fff;
+}
+
+header h1{
+    font-weight: 300;
+    color: #23306a;
+    font-size: 26px;
+    width: 600px;
+}
+
+header h1>span{
+    font-weight: 600;
 }
 
 main {
+
+    margin-top: -60px;
     background-color: #D9D9D9;
     display: grid;
     gap: 24px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows:100px 1fr 1fr;
+    grid-template-rows: 100px 400px 1fr;
     padding: 0 70px;
 }
 
@@ -23,52 +46,113 @@ section {
 .section-metricas{
     background-color: transparent;
     display: grid;
-    gap: 20px;
     grid-template-columns: repeat(4, 1fr);
+    color: #fff;
+    gap: 10px;
 }
 
 .section-metricas > div {
+    z-index: 2;
     padding: 12px 30px;
     border-radius: 20px;
 }
 
 .container-metrica1{
-    background: radial-gradient(#ffffff2a, #5383EC);
+    background: radial-gradient(circle at top center,  #9bb7f4, #5383EC );
     
 }
 
 .container-metrica2{
-    background: radial-gradient( #ffffff2a, #9C55EC);
+    background: radial-gradient(circle at top center, #d0aef6, #9C55EC);
 
 }
 
 .container-metrica3{
-    background: radial-gradient(#ffffff2a, #111E5F);
+    background: radial-gradient(circle at top center, #8f95b4, #111E5F);
     
 }
 
 .container-metrica4{
-    background: radial-gradient( #ffffff2a, #F1911E);
+    background: radial-gradient(circle at top center, #f8c68b, #F1911E);
+}
+
+.metrica-span1 {
+  font-size: 36px;
+  font-weight: 600;
+  display: block;
+}
+.metrica-span2 {
+  color: #82FFB7;
+}
+.metrica-span2::before {
+  content: url(SETA.png);
+  margin-right: 5px;
+}
+
+.adoção, .engajamento, .retenção, .sucesso, {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container-metrica1::after {
+    content: url(Vector\ \(3\).png);
+}
+
+.container-metrica2::after {
+    content: url(Vector\ \(4\).png);
+}
+
+.container-metrica3::after {
+    content: url(Vector\ \(5\).png);
+}
+
+.container-metrica4::after{
+    content: url(Vector\ \(6\).png);
 }
 
 .section-metricas, .section-vendas  {
     grid-column: span 2;
 }
 
-.section-satisfação, .section-engajamento{
+.section-satisfacao, .section-engajamento{
     padding: 25px;
 }
 
-.section-satisfação{
+.section-satisfacao{
     text-align: center;
 }
 
-.section-satisfação h1{
+.section-satisfacao img {
+    width: 60%;
+    margin-top: 20px
+}
+
+.section-satisfacao h1{
     text-align: left;
 }
 
 .section-vendas{
     padding: 35px 50px;
+}
 
+.section-engajamento h1, .section-satisfacao h1, .section-vendas h1 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-satisfacao h1::before{ 
+    content: url(Vector\ \(2\).png  );
+    
+}
+
+.section-engajamento h1::before{ 
+    content: url(Vector\ \(1\).png);
+    
+
+}
+
+.section-vendas h1::before{
+    content: url(Vector.png);
 }
 
